@@ -1,0 +1,956 @@
+{
+  "name": "from_onnx",
+  "date_created": "2024-01-21 20:34:14.168629",
+  "platform": {
+    "part": "xczu9eg-ffvb1156-2-e",
+    "board": "",
+    "resources": {
+      "DSP": 2520,
+      "BRAM": 1824,
+      "FF": 548160,
+      "LUT": 274080
+    },
+    "board_freq": 200,
+    "mem_bw": 153.6,
+    "reconf_time": 0.08255,
+    "port_width": 512
+  },
+  "total_operations": 1818890240.0,
+  "network": {
+    "multi_fpga": false,
+    "performance": {
+      "latency (s)": 0.005933515,
+      "throughput (FPS)": 168.5341656673995,
+      "performance (OP/s)": 306545149038.976,
+      "cycles": 1186703,
+      "delays between partitions (s)": 0.08255
+    },
+    "num_partitions": 1,
+    "max_resource_usage": {
+      "LUT": 134142,
+      "FF": 97755,
+      "BRAM": 2291,
+      "DSP": 1621.5
+    },
+    "sum_resource_usage": {
+      "LUT": 134142,
+      "FF": 97755,
+      "BRAM": 2291,
+      "DSP": 1621
+    }
+  },
+  "partitions": {
+    "0": {
+      "partition_index": 0,
+      "batch_size": 1,
+      "num_layers": 77,
+      "latency": 0.005933515,
+      "cycles": 1186703,
+      "slowdown": 1.0584791031601426,
+      "weights_reloading_factor": 1,
+      "weights_reloading_layer": "Gemm_48",
+      "resource_usage": {
+        "LUT": 134142,
+        "FF": 97755,
+        "BRAM": 2291,
+        "DSP": 1621.5
+      },
+      "bandwidth": {
+        "in (Gbps)": 0.14355468750000003,
+        "out (Gbps)": 0.0009536743164062502,
+        "weight (Gbps)": 152.0057181737851
+      },
+      "layers": {
+        "Conv_0": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 846399,
+          "cycle": 846399,
+          "resource_usage": {
+            "LUT": 4160,
+            "FF": 4827,
+            "BRAM": 20,
+            "DSP": 75,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Relu_1": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 802816,
+          "cycle": 802816,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "MaxPool_2": {
+          "type": "LAYER_TYPE.Pooling",
+          "interval": 831744,
+          "cycle": 831744,
+          "resource_usage": {
+            "LUT": 342,
+            "FF": 398,
+            "BRAM": 7,
+            "DSP": 0
+          }
+        },
+        "Conv_3": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 861183,
+          "cycle": 861183,
+          "resource_usage": {
+            "LUT": 2479,
+            "FF": 3084,
+            "BRAM": 20,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Relu_4": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 200704,
+          "cycle": 200704,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_5": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 861183,
+          "cycle": 861183,
+          "resource_usage": {
+            "LUT": 2479,
+            "FF": 3084,
+            "BRAM": 20,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Add_6": {
+          "type": "LAYER_TYPE.EltWise",
+          "interval": 200704.0,
+          "cycle": 200704.0,
+          "resource_usage": {
+            "LUT": 49,
+            "FF": 23,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_7": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 200704,
+          "cycle": 200704,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_8": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 861183,
+          "cycle": 861183,
+          "resource_usage": {
+            "LUT": 2479,
+            "FF": 3084,
+            "BRAM": 20,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Relu_9": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 200704,
+          "cycle": 200704,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_10": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 861183,
+          "cycle": 861183,
+          "resource_usage": {
+            "LUT": 2479,
+            "FF": 3084,
+            "BRAM": 20,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Add_11": {
+          "type": "LAYER_TYPE.EltWise",
+          "interval": 200704.0,
+          "cycle": 200704.0,
+          "resource_usage": {
+            "LUT": 49,
+            "FF": 23,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_12": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 200704,
+          "cycle": 200704,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_13": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 861183,
+          "cycle": 861183,
+          "resource_usage": {
+            "LUT": 1427,
+            "FF": 1794,
+            "BRAM": 22,
+            "DSP": 44,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Conv_16": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 802816,
+          "cycle": 802816,
+          "resource_usage": {
+            "LUT": 553,
+            "FF": 479,
+            "BRAM": 4,
+            "DSP": 12,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Relu_14": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 100352,
+          "cycle": 100352,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_15": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 921600,
+          "cycle": 921600,
+          "resource_usage": {
+            "LUT": 2493,
+            "FF": 3107,
+            "BRAM": 43,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Add_17": {
+          "type": "LAYER_TYPE.EltWise",
+          "interval": 100352.0,
+          "cycle": 100352.0,
+          "resource_usage": {
+            "LUT": 49,
+            "FF": 23,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_18": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 100352,
+          "cycle": 100352,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_19": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 921600,
+          "cycle": 921600,
+          "resource_usage": {
+            "LUT": 2493,
+            "FF": 3107,
+            "BRAM": 43,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Relu_20": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 100352,
+          "cycle": 100352,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_21": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 921600,
+          "cycle": 921600,
+          "resource_usage": {
+            "LUT": 2493,
+            "FF": 3107,
+            "BRAM": 43,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Add_22": {
+          "type": "LAYER_TYPE.EltWise",
+          "interval": 100352.0,
+          "cycle": 100352.0,
+          "resource_usage": {
+            "LUT": 49,
+            "FF": 23,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_23": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 100352,
+          "cycle": 100352,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_24": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 921600,
+          "cycle": 921600,
+          "resource_usage": {
+            "LUT": 1460,
+            "FF": 1820,
+            "BRAM": 73,
+            "DSP": 44,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Conv_27": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 802816,
+          "cycle": 802816,
+          "resource_usage": {
+            "LUT": 586,
+            "FF": 484,
+            "BRAM": 10,
+            "DSP": 12,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Relu_25": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 50176,
+          "cycle": 50176,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_26": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 1048575,
+          "cycle": 1048575,
+          "resource_usage": {
+            "LUT": 2519,
+            "FF": 3131,
+            "BRAM": 139,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Add_28": {
+          "type": "LAYER_TYPE.EltWise",
+          "interval": 50176.0,
+          "cycle": 50176.0,
+          "resource_usage": {
+            "LUT": 49,
+            "FF": 23,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_29": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 50176,
+          "cycle": 50176,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_30": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 1048575,
+          "cycle": 1048575,
+          "resource_usage": {
+            "LUT": 2519,
+            "FF": 3131,
+            "BRAM": 139,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Relu_31": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 50176,
+          "cycle": 50176,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_32": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 1048575,
+          "cycle": 1048575,
+          "resource_usage": {
+            "LUT": 2519,
+            "FF": 3131,
+            "BRAM": 139,
+            "DSP": 88,
+            "URAM": 0,
+            "BW(weight)": 0.0
+          }
+        },
+        "Add_33": {
+          "type": "LAYER_TYPE.EltWise",
+          "interval": 50176.0,
+          "cycle": 50176.0,
+          "resource_usage": {
+            "LUT": 49,
+            "FF": 23,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_34": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 50176,
+          "cycle": 50176,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_35": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 1048575,
+          "cycle": 1048575,
+          "resource_usage": {
+            "LUT": 1526,
+            "FF": 1851,
+            "BRAM": 209,
+            "DSP": 44,
+            "URAM": 0,
+            "BW(weight)": 18.432
+          }
+        },
+        "Conv_38": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 802816,
+          "cycle": 802816,
+          "resource_usage": {
+            "LUT": 652,
+            "FF": 494,
+            "BRAM": 23,
+            "DSP": 12,
+            "URAM": 0,
+            "BW(weight)": 2.8000026702906324
+          }
+        },
+        "Relu_36": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_37": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 663552,
+          "cycle": 663552,
+          "resource_usage": {
+            "LUT": 4908,
+            "FF": 5854,
+            "BRAM": 427,
+            "DSP": 160,
+            "URAM": 0,
+            "BW(weight)": 44.861581244876284
+          }
+        },
+        "Add_39": {
+          "type": "LAYER_TYPE.EltWise",
+          "interval": 25088.0,
+          "cycle": 25088.0,
+          "resource_usage": {
+            "LUT": 49,
+            "FF": 23,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_40": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_41": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 663552,
+          "cycle": 663552,
+          "resource_usage": {
+            "LUT": 4908,
+            "FF": 5854,
+            "BRAM": 427,
+            "DSP": 160,
+            "URAM": 0,
+            "BW(weight)": 44.861581244876284
+          }
+        },
+        "Relu_42": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_43": {
+          "type": "LAYER_TYPE.Convolution",
+          "interval": 663552,
+          "cycle": 663552,
+          "resource_usage": {
+            "LUT": 4685,
+            "FF": 5743,
+            "BRAM": 431,
+            "DSP": 176,
+            "URAM": 0,
+            "BW(weight)": 44.861581244876284
+          }
+        },
+        "Add_44": {
+          "type": "LAYER_TYPE.EltWise",
+          "interval": 25088.0,
+          "cycle": 25088.0,
+          "resource_usage": {
+            "LUT": 49,
+            "FF": 23,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_45": {
+          "type": "LAYER_TYPE.ReLU",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 16,
+            "FF": 35,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "GlobalAveragePool_46": {
+          "type": "LAYER_TYPE.GlobalPooling",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 683,
+            "FF": 7877,
+            "BRAM": 0,
+            "DSP": 1
+          }
+        },
+        "Gemm_48": {
+          "type": "LAYER_TYPE.InnerProduct",
+          "interval": 512000,
+          "cycle": 512000,
+          "resource_usage": {
+            "LUT": 1077,
+            "FF": 367,
+            "BRAM": 12,
+            "DSP": 1.5,
+            "URAM": 0,
+            "BW(weight)": 5.0781298428820065
+          }
+        },
+        "MaxPool_2_split": {
+          "type": "LAYER_TYPE.Split",
+          "interval": 200704.0,
+          "cycle": 200704.0,
+          "resource_usage": {
+            "LUT": 13,
+            "FF": 15,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_7_split": {
+          "type": "LAYER_TYPE.Split",
+          "interval": 200704.0,
+          "cycle": 200704.0,
+          "resource_usage": {
+            "LUT": 13,
+            "FF": 15,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_12_split": {
+          "type": "LAYER_TYPE.Split",
+          "interval": 200704.0,
+          "cycle": 200704.0,
+          "resource_usage": {
+            "LUT": 13,
+            "FF": 15,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_18_split": {
+          "type": "LAYER_TYPE.Split",
+          "interval": 100352.0,
+          "cycle": 100352.0,
+          "resource_usage": {
+            "LUT": 13,
+            "FF": 15,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_23_split": {
+          "type": "LAYER_TYPE.Split",
+          "interval": 100352.0,
+          "cycle": 100352.0,
+          "resource_usage": {
+            "LUT": 13,
+            "FF": 15,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_29_split": {
+          "type": "LAYER_TYPE.Split",
+          "interval": 50176.0,
+          "cycle": 50176.0,
+          "resource_usage": {
+            "LUT": 13,
+            "FF": 15,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_34_split": {
+          "type": "LAYER_TYPE.Split",
+          "interval": 50176.0,
+          "cycle": 50176.0,
+          "resource_usage": {
+            "LUT": 13,
+            "FF": 15,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_40_split": {
+          "type": "LAYER_TYPE.Split",
+          "interval": 25088.0,
+          "cycle": 25088.0,
+          "resource_usage": {
+            "LUT": 13,
+            "FF": 15,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_3_squeeze_Relu_4": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 200704,
+          "cycle": 200704,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_5_squeeze_Add_6": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 200704,
+          "cycle": 200704,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_8_squeeze_Relu_9": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 200704,
+          "cycle": 200704,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_10_squeeze_Add_11": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 200704,
+          "cycle": 200704,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_13_squeeze_Relu_14": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 100352,
+          "cycle": 100352,
+          "resource_usage": {
+            "LUT": 2380,
+            "FF": 1246,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_16_squeeze_Add_17": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 100352,
+          "cycle": 100352,
+          "resource_usage": {
+            "LUT": 2380,
+            "FF": 1246,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_15_squeeze_Add_17": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 100352,
+          "cycle": 100352,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_19_squeeze_Relu_20": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 100352,
+          "cycle": 100352,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_21_squeeze_Add_22": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 100352,
+          "cycle": 100352,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_24_squeeze_Relu_25": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 50176,
+          "cycle": 50176,
+          "resource_usage": {
+            "LUT": 2380,
+            "FF": 1246,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_27_squeeze_Add_28": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 50176,
+          "cycle": 50176,
+          "resource_usage": {
+            "LUT": 2380,
+            "FF": 1246,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_26_squeeze_Add_28": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 50176,
+          "cycle": 50176,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_30_squeeze_Relu_31": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 50176,
+          "cycle": 50176,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_32_squeeze_Add_33": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 50176,
+          "cycle": 50176,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_35_squeeze_Relu_36": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 2380,
+            "FF": 1246,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_38_squeeze_Add_39": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 2380,
+            "FF": 1246,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_36_squeeze_Conv_37": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 387,
+            "FF": 1151,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_37_squeeze_Add_39": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_41_squeeze_Relu_42": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 4744,
+            "FF": 1379,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Conv_43_squeeze_Add_44": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 9473,
+            "FF": 1638,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        },
+        "Relu_40_split_squeeze_Conv_41": {
+          "type": "LAYER_TYPE.Squeeze",
+          "interval": 25088,
+          "cycle": 25088,
+          "resource_usage": {
+            "LUT": 387,
+            "FF": 1151,
+            "BRAM": 0,
+            "DSP": 0
+          }
+        }
+      }
+    }
+  }
+}
